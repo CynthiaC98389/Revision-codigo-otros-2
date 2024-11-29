@@ -2,7 +2,7 @@ var formulario = document.querySelector("#form")
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDefault(); //Corregido, faltaba default
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
