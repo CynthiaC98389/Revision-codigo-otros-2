@@ -29,13 +29,15 @@ if (nombre.length > 0
   agregarInvitado(nombre, edad, nacionalidad)
   }
 }
-
+//Se elimino dicho boton ya que aparecia en la pagina aun cuando no se habia ingresado un invitado
+//entonces solo se dejo el boton cuando ya se haya creado un invitado, y se pueda eliminar desde ahi
+/*
 var botonBorrar = document.createElement("button")
 botonBorrar.textContent = "Eliminar invitado"
 botonBorrar.id = "boton-borrar"
 var corteLinea = document.createElement("br")
 document.body.appendChild(corteLinea)
-document.body.appendChild(botonBorrar);
+document.body.appendChild(botonBorrar);*/
 
 function agregarInvitado(nombre, edad, nacionalidad) {
 
@@ -55,9 +57,9 @@ function agregarInvitado(nombre, edad, nacionalidad) {
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista") //se corrigi decia added y es add
 lista.appendChild(elementoLista)
-
+/*
 var spanNombre = document.createElement("span")
 var inputNombre = document.createElement("input")
 var espacio = document.createElement("br")
@@ -66,6 +68,7 @@ inputNombre.value = nombre
 elementoLista.appendChild(spanNombre)
 elementoLista.appendChild(inputNombre)
 elementoLista.appendChild(espacio)
+*/
 
 function crearElemento(descripcion, valor) {
 var spanNombre = document.createElement("span")
@@ -77,7 +80,7 @@ elementoLista.appendChild(spanNombre)
 elementoLista.appendChild(inputNombre)
 elementoLista.appendChild(espacio)
 }
-
+//Con esto se crea un elemento para cada dato
 crearElemento("Nombre", nombre)
 crearElemento("Edad", edad)
 crearElemento("Nacionalidad", nacionalidad)
